@@ -1,5 +1,5 @@
 # divvy-trends
-__Deployed on Heroku at:__http://divvy-trends.herokuapp.com/
+__Deployed on Heroku at:__ http://divvy-trends.herokuapp.com/
 
 The purpose of this project is to study Chicago's Divvy data from June 2013 to June 2016 against weather and crime data between the same 3 year window.
 
