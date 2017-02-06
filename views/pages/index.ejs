@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90995370-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TRM2935');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Divvy Trends | TDI" />   
+    <meta name="description" content="Divvy Trends - An application for TDI">
+    <meta name="author" content="Shahbaz Ali Khan">
+    <link rel="image_src" href="../images/Divvy_trends_thumb.png" />
+
+
+
+    <title>Divvy Trends | TDI</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="../stylesheets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../stylesheets/css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../stylesheets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+
+<body id="page-top" class="index">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TRM2935"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top" onclick="ga('send','event','Navigation','Brand click for top of page');">Divvy Trends</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#viz">Visualizations</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+    <style>
+        header{
+        background : #a2fbea;           
+
+            }
+
+            hr.star-light:after {
+            color: #fff;
+            background-color: #a2fbea;
+        }
+
+        .size20 {
+            font-size: 20px;
+        }
+    </style>
+
+        <div style="padding-top: 120px" class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <span><img class="img-responsive" src="../images/logodivvy.png" alt=""><i class="fa fa-line-chart fa-5x" style="color:#0ab6eb" aria-hidden="true"></i></span>
+                    <div class="intro-text">
+                        <font color="black">
+                        <span class="name">DIVVY Trends</span>
+                        <hr class="star-light" style="color: #a2fbea">
+                        <span class="skills">Analyzing Divvy activity against crime data</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+     <!-- About Section -->
+    <section class="success" id="about" style="background: white" >
+          
+        <div class="container" >
+            <font color="black">
+            <div class="row">
+                <div class="col-lg-12 text-center" >
+                    
+                    <h2>About</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <p>The purpose of this project is to study Chicago's Divvy data from June 2013 to June 2016 against weather and crime data between the same 3 year window.<br><br>
+                       The hypothesis is that crime reports will have an effect on the routes riders will take. The project will study the extent of these changes under different conditions. <br><br>
+                       By studying the data, I would like to do the following:<br>
+                       <ul class="size20">
+                           <li>Infer the path that the rider took. The way to do this would be to look at average cycling speeds and the distance between two stations (start station AND end station) using either the Google Maps API or the <a href="https://github.com/perliedman/leaflet-routing-machine" target="_blank" onclick="ga('send','event','External_Link','Leaflet Routing Machine');">Leaflet Routing Machine</a></li>
+                           <li>Look at trip trends between the same station. In doing so, I would like to see if there is an increase in trip durations between points where increased criminal activity had been reported (within some time window). Due to Chicago's weather, this will have to be studied seasonally. Additionally, similar days with similar riding conditions (rainy vs. sunny) will be studied separately.</li>
+                           <li>Look at trip trends at different times. Trip durations are expected to vary depending on the time of the day. By studying data in buckets so that every hour of the day falls into one bucket (less traffic, moderate traffic, lots of traffic), we are able to get more accurate expected durations. </li>
+                           <li>Next, I would like to find a threshold for each of these buckets to see that depending on the amount of traffic, how much criminal activity (and of what type) has to be reported to cause riders to take a longer path.</li>
+                           <li>Look at trip trends by gender. By studying the subset of the data related to specific genders, is there a difference in behavior (trip durations by hour and thresholds for taking longer routes).</lI>
+                       </ul>
+                       <p>To complete this project, I will be extracting data from the following non-exhaustive list of sources:<br></p>
+                       <ul class="size20">
+                           <li><a target="_blank" href="https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present-Map/c4ep-ee5m" onclick="ga('send','event','External_Link','Crime Data');">City of Chicago - Crime data from June 2013 - present [210 MB]</a></li>
+                           <li><a target="_blank" href="https://www.divvybikes.com/system-data" onclick="ga('send','event','External_Link','Divvy Data');">Divvy Chicago Data [1,750MB]</a></li>
+                           <li><a target="_blank" href="https://openweathermap.org/api" onclick="ga('send','event','External_Link','Weather Data');">Weather Data</a></li>
+                      </ul> 
+
+                    </p>
+                </div>
+                <br>
+                <br>
+                <div style="margin-top:30px" class="embed-responsive embed-responsive-16by9 col-lg-10 col-lg-offset-1">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Z5F9vGl04LY?enablejsapi=1"></iframe>
+                </div>
+
+
+                <div class="col-lg-8 col-lg-offset-2 text-center page-scroll" >
+                      <a style='font-color: black' href="#viz" class="btn btn-lg btn-outline" onclick="ga('send','event','Navigation','Arrow Click to Visualizations');"> <font color="black"> <b><i>See the work below</i></b>
+                            <br><br>
+                        <i class="fa fa-long-arrow-down fa-2x"></i>
+                        </font> 
+                        </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio" >
+    <section id="viz" style="background: #a2fbea">
+        <font color="black">
+        <div class="container">
+
+
+            <div class="col-lg-12 text-center">
+                    <h2>Visualizations</h2>
+                    <hr class="star-light">                        
+            </div>
+
+            <div id="viz1" class="row">
+                <div class="col-lg-12 text-center">
+                        <h3>Visualization Group One</h3>
+                        <h4>Plotting km/hr and number of rides vs. time</h4>
+                </div>
+
+            <div id="viz_group_1" class="col-sm-6 portfolio-item">
+            <div class="col-sm-6 portfolio-item">
+                    <a href="/viz1"  class="portfolio-link" data-toggle="modal" onclick="ga('send','event','Internal_Link','Viz 1','Image 1');">
+                        <div class="caption" >
+                            <div class="caption-content" style='padding-top: -10px'>
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="../images/viz1_1.png" class="img-responsive" alt="Viz Group 1 image">
+                    </a>
+                </div>
+
+            <div class="col-sm-6 portfolio-item">
+                    <a href="/viz1"  class="portfolio-link" data-toggle="modal" onclick="ga('send','event','Internal_Link','Viz 1','Image 2');">
+                        <div class="caption" >
+                            <div class="caption-content" style='padding-top: -10px'>
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="../images/viz1_2.png" class="img-responsive" alt="Viz Group 1 image">
+                    </a>
+                </div>
+
+            <div class="col-sm-6 portfolio-item">
+                    <a href="/viz1"  class="portfolio-link" data-toggle="modal" onclick="ga('send','event','Internal_Link','Viz 1','Image 3');">
+                        <div class="caption" >
+                            <div class="caption-content" style='padding-top: -10px'>
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="../images/viz1_3.png" class="img-responsive" alt="Viz Group 1 image">
+                    </a>
+                </div>
+                <div class="col-sm-6 portfolio-item">
+                    <a href="/viz1"  class="portfolio-link" data-toggle="modal" onclick="ga('send','event','Internal_Link','Viz 1','Image 4');">
+                        <div class="caption" >
+                            <div class="caption-content" style='padding-top: -10px'>
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="../images/viz1_4.png" class="img-responsive" alt="Viz Group 1 image">
+                    </a>
+                </div>
+            </div>
+            <div id="viz1_text" class="col-sm-6">
+                <p>Click the thumbnails to be taken to the <b>interactive</b> visualizations for group one or click <a href="/viz1" onclick="ga('send','event','Internal_Link','Viz 1','Link in description');">HERE</a>. The code for each of these visualizations along with their explanations can be found accompanying them.
+                <br><br>
+                You can read about the data <a href="https://www.divvybikes.com/system-data" onclick="ga('send','event','External_Link','Divvy Data');">HERE</a>
+                </p>
+
+            </div>
+        </div>
+
+        <div id="viz2" class="row">
+            <div class="col-lg-12 text-center">
+                        <h3>Visualization Group Two</h3>
+                        <h4>Plotting Crime activity vs. Time</h4>                
+            </div>
+
+            <div id="viz_group_2" class="col-sm-6 portfolio-item">
+                <div class="col-sm-6 portfolio-item">
+                        <a href="/viz2"  class="portfolio-link" data-toggle="modal" onclick="ga('send','event','Internal_Link','Viz 2','Image 1');">
+                            <div class="caption" >
+                                <div class="caption-content" style='padding-top: -10px'>
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="../images/viz2_1.png" class="img-responsive" alt="Viz Group 2 image">
+                        </a>
+                </div>
+                <div class="col-sm-6 portfolio-item">
+                        <a href="/viz2"  class="portfolio-link" data-toggle="modal" onclick="ga('send','event','Internal_Link','Viz 2','Image 2');">
+                            <div class="caption" >
+                                <div class="caption-content" style='padding-top: -10px'>
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="../images/viz2_2.png" class="img-responsive" alt="Viz Group 2 image">
+                        </a>
+                </div>
+
+                    <!-- ADD MORE HERE -->
+            </div>
+
+            <div id="viz2_text" class="col-sm-6">
+                    <p>Click the thumbnails to be taken to the <b>interactive</b> visualizations for group two or click <a href="/viz2" onclick="ga('send','event','Internal_Link','Viz 2','Link in description');">HERE</a>. The code for each of these visualizations along with their explanations can be found accompanying them.</p>
+                </div>
+            </div>
+
+
+
+        <div id="script1" class="row">
+            <div class="col-lg-12 text-center">
+                        <h3>Data Manipulation and Visualization Script</h3>
+                        <h4>Aggregate Script (as of Feb. 3, 2016)</h4>                
+            </div>
+            <div class="col-lg-8 col-lg-offset-2 text-center" style="padding-bottom:50px; color:#000">
+                    <a href="../documents/aggregateScript_divvy.R" target="_blank" class="btn btn-lg btn-outline" style="color:#000" onclick="ga('send','event','Downloads','script download','R');"> 
+                        <i class="fa fa-download"></i> Click to download R Script
+                    </a>
+            </div>
+
+
+        </div>
+            
+        
+    </section>
+     </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <font color='black'>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Contact Me</h2>
+                    <p>Have any questions about the project? Ask me here!</p>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Name</label>
+                  
+                                <input type="text"  class="form-control"  placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Email Address</label>
+                                <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Phone Number</label>
+                                <input type="tel"  class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Message</label>
+                                <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div id="success"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" class="btn btn-success btn-lg" onclick="ga('send','event','Form_Submission','Contact Me Form');">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-6">
+                        <h3>Location</h3>
+                        <p>Chicago, IL</p>
+                    </div>
+                    <div class="footer-col col-md-6">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+<!--                            <li>
+                                <a href="https://www.facebook.com/shahbaz.a.khan.50" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>-->
+                            <li>
+                                <a href="https://plus.google.com/u/0/+ShahbazKhan360/about/p/pub" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <!--<li>
+                                <a href="https://twitter.com/funnymansak" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>-->
+                            <li>
+                                <a href="https://www.linkedin.com/pub/shahbaz-khan/5a/353/157/" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/sak360" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                          </li>
+                          <li>
+                                <a href="http://skhan231.people.uic.edu/" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-user"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Shahbaz Ali Khan 2016
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visble-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Portfolio Modals -->
+
+    
+      <div class="portfolio-modal modal fade" id="viz1Modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>UIC Learning Technology Solutions</h2>
+                            <hr class="star-primary">
+                            <img src="pics_shahbaz/UIC_drop.jpg" class="img-responsive img-centered" alt="">
+                            <p align="left">
+                               <b>Status:</b> May 2015 - Present<br><br>
+                                <b>Primary Objective:</b> Supervise and train Graduate Assistants in providing support to clients.<br><br>
+                                <b>Secondary Objective:</b> Complete special projects as assigned.<br><br>
+                                
+                                <b>Major Accomplishments:</b><br><br>
+                                Developed an internal knowledge base (LTS KB) which led to a reduction in avg. case resolution time by 19%.<br><br>
+
+                                Led the development of KPIs following the ITIL framework to track client engagement, communication speed, and info. reliability, cutting the avg. case resolution time by 44% and increasing client satisfaction by 56%.<br><br>
+                                
+                                Represented UIC at BbWorld and DevCon 2016, in Las Vegas, NV, by presenting and sitting on a panel in the two conferences, respectively (see 'Conferences' section).
+                                
+
+                                <br><br>                       
+                                <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://www.crowehorwath.com/" target='_blank'><i>UIC</i></a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><font color="#18bc9c" >August 2015-Present</font>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><font color="#18bc9c" >Teaching Assistant | Data Analyst</font>
+                                    </strong>
+                                  </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+</div>
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="../js/classie.js"></script>
+    <script src="../js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="../js/jqBootstrapValidation.js"></script>
+    <script src="../js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../js/freelancer.js"></script>
+
+
+</body>
+
+</html>
