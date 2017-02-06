@@ -171,12 +171,7 @@ library(gdata)
 library(ggplot2)
 library(plotly)
 
-# channel <- odbcConnect(dsn="sql_tdi_db")
-# divvyData <- sqlQuery(channel,"Select * from [Divvy_Trips]") #read if not read in before
-# close(channel)
 
-#load in crime data
-# crimeData <- read.csv('Crimes_-_2001_to_present.csv') #read if not read in before
 #load in weather data
 df.weather <- read.csv('weatherORD_2013_now.csv')
 
@@ -260,30 +255,9 @@ divvyData.start.agg <- divvyData.map %>% group_by(FROM_STATION_ID,FROM_STATION_N
 
 #since some stations were moved, need to merge them together
 
-# divvyData.start.agg.merge <- divvyData.start.agg %>% group_by(FROM_STATION_ID) %>% summarise(Frequency_Total = sum(Frequency)) %>% as.data.frame()
-
-# divvyData.start.agg <- divvyData.start.agg %>% left_join(divvyData.start.agg.merge, on = FROM_STATION_ID) %>% select(-Frequency) %>% distinct(FROM_STATION_ID)
-
-
-
 
 
 ########
-
-
-# install_github('ramnathv/rCharts@dev')
-# install_github('ramnathv/rMaps')
-# install.packages("leaflet")
-
-
-# 
-# m <- leaflet() %>%
-#     addProviderTiles("CartoDB.Positron") %>%  # Add default OpenStreetMap map tiles
-#   setView(lng=-87.623177, lat= 41.881832, zoom = 14) %>%
-#   addMarkers(lng=-87.623177, lat= 41.881832, popup="The birthplace of Shabby")
-# m  # Print the map
-
-
 
 leaflet.divvy <- leaflet() %>%
   addProviderTiles("CartoDB.Positron") %>%
@@ -303,12 +277,6 @@ crimeData.filtered.2 <- filter(crimeData, Domestic == "false", Primary.Type == "
 
 #omit incomplete crime data
 crimeData.filtered.2 <- na.omit(crimeData.filtered.2)
-
-
-
-
-# install.packages('geosphere')
-# library(geosphere)
 
 
 
@@ -346,18 +314,7 @@ midpoint_two_points <- function (lat1, lon1, lat2, lon2)
 
 
 midpoint_two_points(41.881832, -87.623177, 41.881126, -87.641837)
-# 
-# 
-# 
-# p1 <- c(41.881832, -87.623177) #lat
-# p2 <- c(41.881126, -87.641837) #lon
 
-
-
-
-# midPoint(p1, p2, a=6378137, f = 1/298.257223563)
-
-# nrow(distinct.stations)
 
 distinct.stations <- distinct.stations %>% mutate(Mid_Location = midpoint_two_points(FROM_LATITUDE,FROM_LONGITUDE,TO_LATITUDE,TO_LONGITUDE))
 
@@ -366,15 +323,6 @@ library(stringr)
 distinct.stations$Mid_lat <- as.numeric(str_split_fixed(distinct.stations$Mid_Location, ",", 2)[,1])#column 1 is lats
 distinct.stations$Mid_lon <- as.numeric(str_split_fixed(distinct.stations$Mid_Location, ",", 2)[,2])#column 2 is lons
 
-
-
-# stations.and.crime <- merge(distinct.stations[1,], crimeData.filtered.2) #merging one station with crime data
-
-
-
-# numOfCRimesInRadius <- function(radius, lat, lon) {
-#   sapply(, function)
-# }
 
 
 
@@ -388,11 +336,6 @@ numOfCRimesInRadius <- function(x) {
 distinct.stations <- mutate(distinct.stations,trip_distance = gcd(FROM_LATITUDE, FROM_LONGITUDE, TO_LATITUDE, TO_LONGITUDE))
 
 
-
-# divvyData$ClosestWeatherID <-  sapply(divvyData$START_TIME, getClosestWeatherRecord)
-
-
-
 divvyData.tiny <- head(divvyData, 100)
 
 
@@ -404,8 +347,6 @@ print(x)
 
 sapply(divvyData.tiny, sApplyTest)
 
-
-# filter(distinct.stations, distinct.stations$Mid_lon == NA)
 
 
 ################work with one month's data
@@ -515,11 +456,6 @@ distinct.routes.2015.7$Mid_lon <- as.numeric(str_split_fixed(distinct.routes.201
 
 distinct.routes.2015.7$Num.Crimes.mid <- sample(5:20, nrow(distinct.routes.2015.7), replace=T) * (1/distinct.routes.2015.7$Num.Rides) * (distinct.routes.2015.7$Num.Rides)
 
-# distinct.routes.2015.7$Num.Rides <- sample(300:11000, nrow(distinct.routes.2015.7), replace=T)
-
-# distinct.routes.2015.7 <- arrange(distinct.routes.2015.7, desc(distinct.routes.2015.7$Num.Rides - distinct.routes.2015.7$Num.Crimes.mid))
-
-
 distinct.routes.2015.7_50 <- rbind(tail(distinct.routes.2015.7,25), head(distinct.routes.2015.7,25))
 
 
@@ -617,16 +553,6 @@ for(i in 1:length(list_routes))
 }
 
 
-# distinct.routes.2015.7_50 <- lapply(list, function)
-# Lines.data <- Lines(list_routes.supp, ID="ball")
-
-# Lines.data <- list_routes.supp[[1]]
-# leaflet(data = Lines.data) %>%
-#   # for(i in )
-#   # addProviderTiles("CartoDB.Positron") %>%
-#   setView(lng=-87.623177, lat= 41.881832, zoom = 13) %>%
-#   addTiles() %>%
-#   addPolylines()
 
 midPointAndCRime <- leaflet() %>%
   addProviderTiles("CartoDB.Positron") %>%
@@ -650,78 +576,6 @@ midPointAndCRime <- midPointAndCRime %>% addCircles(lng= distinct.routes.2015.7_
 
 
 midPointAndCRime
-
-
-# stations.crime.2015.7.summ
-# order
-# distinct.routes.2015.7,
-
-# route.crimes.2015.7 <- merge(crimeData.filtered.2015.7, distinct.routes.2015.7)
-# 
-# # test.merged<-join(criCmeData.filtered.2015.7, distinct.routes.2015.7, type="all")  
-# library(data.table)
-# 
-# ## Create two data.tables with which to demonstrate a data.table merge
-# dt <- as.matrix(crimeData.filtered.2015.7)
-# 
-# class(dt) <- "character"
-# 
-# dt <- data.table(crimeData.filtered.2015.7, key=names(crimeData.filtered.2015.7))
-# 
-# dt2 <- as.matrix(distinct.routes.2015.7)
-#   
-# class(dt2) <- "character"
-# 
-# dt2 <- data.table(distinct.routes.2015.7, key=names(distinct.routes.2015.7))
-# ## Add to each one a unique non-keyed column
-# 
-# dt2$X <- rev(seq_len(nrow(dt2)))
-# dt$Y<- seq_len(nrow(dt2))
-# 
-# ## Merge them based on the keyed columns (in both cases, all but the last) to ...
-# ## (1) create a new data.table
-# dt3 <- dt[dt2]
-# ## (2) or (poss. minimizing memory usage), just add column Y from dt2 to dt
-# dt[dt2,Y:=Y]
-# 
-# d34 <- merge(dt,dt2,all= T)
-# 
-# merge(dt, dt2, all = TRUE)
-# dt <- data.table(test, key=names(test))
-# dt2 <- copy(dt)
-
-# 
-# distinct.stations <- distinct(divvyData, FROM_STATION_ID, FROM_LATITUDE, FROM_LONGITUDE, TO_STATION_ID, TO_LATITUDE, TO_LONGITUDE)
-# nrow(distinct.stations)
-# #It looks like some stations have moved over the years, as we see a slightly higher number of combinations (stationIDs were reassigned)
-
-
-
-# leaflet.crime.2015.7 <- leaflet() %>%
-#   addProviderTiles("CartoDB.Positron") %>%
-#   setView(lng=-87.623177, lat= 41.881832, zoom = 13) %>%
-#   addCircles(lng= stations.crime.2015.7.summ$FROM_LONGITUDE, lat = stations.crime.2015.7.summ$FROM_LATITUDE, 
-#              weight = 1, radius = ((stations.crime.2015.7.summ$numCrimes - minCrime.2015.7)/(maxCrime.2015.7 -minCrime.2015.7)),
-#              popup = paste("Station:", stations.crime.2015.7.summ$FROM_STATION_NAME,"<br>",
-#                            "Station ID:", stations.crime.2015.7.summ$FROM_STATION_ID,"<br>",
-#                            "Num. of Crimes:", stations.crime.2015.7.summ$numCrimes))
-# 
-# leaflet.crime.2015.7
-
-# leaflet.crime.2015.7 <- leaflet() %>%
-#   addProviderTiles("CartoDB.Positron") %>%
-#   setView(lng=-87.623177, lat= 41.881832, zoom = 13) %>%
-#   addCircles(lng= divvyData.start.agg.2015.7$FROM_LONGITUDE, lat = divvyData.start.agg.2015.7$FROM_LATITUDE, 
-#              weight = 1, radius = sqrt(divvyData.start.agg.2015.7$Frequency),
-#              popup = paste("Station:", divvyData.start.agg.2015.7$FROM_STATION_NAME,"<br>",
-#                            "Station ID:", divvyData.start.agg.2015.7$FROM_STATION_ID,"<br>",
-#                            "Num. of Rides:", divvyData.start.agg.2015.7$Frequency))
-# 
-# leaflet.divvy.2015.7
-
-
-
-
 
 
 rm(list= ls()[!(ls() %in% c('month.vs.km.vs.rides.line.norm','month.vs.km.line','num.crimes','crime.time','rides.by.weather','crimes.by.weather','leaflet.divvy','leaflet.divvy.crime.2015.7','midPointAndCRime', 'month.vs.rides.area'))])
