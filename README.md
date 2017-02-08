@@ -17,4 +17,4 @@ To complete this project, I will be extracting data from the following non-exhau
 
 - [City of Chicago - Crime data from June 2013 - present (210 MB)] (https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present-Map/c4ep-ee5m)
 - [Divvy Chicago Data (1,750MB)] (https://www.divvybikes.com/system-data)
-- Weather Data (Scraped using Beautiful Soup. Script in _Data Analysis Scripts_ folder)
+- [Weather Data] (https://openweathermap.org/api) (Scraped using Beautiful Soup. Script in _Data Analysis Scripts_ folder)
