@@ -12,7 +12,7 @@ By studying the data, I would like to do the following:
 - Next, I would like to find a threshold for each of these buckets to see that depending on the amount of traffic, how much criminal activity (and of what type) has to be reported to cause riders to take a longer path.
 - Look at trip trends by gender. By studying the subset of the data related to specific genders, is there a difference in behavior (trip durations by hour and thresholds for taking longer routes).
 
-##Data Sources
+## Data Sources
 To complete this project, I will be extracting data from the following non-exhaustive list of sources:
 
 - [City of Chicago - Crime data from June 2013 - present (210 MB)] (https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present-Map/c4ep-ee5m)
